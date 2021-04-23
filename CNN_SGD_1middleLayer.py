@@ -29,13 +29,7 @@ def diff_logsig(x):
     return float(output)
 
 def humps(x):
-    file = open("humps.txt", "r")
-    for line in file:
-        x0 = float(line.split()[0])
-        y0 = float(line.split()[1])
-        if x0 == x:
-            return y0
-    return -1
+    return (1 / ((x - 0.3) ** 2 + 0.01)) + (1 / ((x - 0.9) ** 2 + 0.04)) - 6
 
 def target_function(x , y):
     return x**2 + y**2 + humps(x)
