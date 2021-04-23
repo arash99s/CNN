@@ -12,6 +12,8 @@ NUMBER_OF_X_TEST = 10
 NUM_MIDDLE_LAYER1_NORONS = 10
 NUM_MIDDLE_LAYER2_NORONS = 10
 NUMBER_EPOCHS = 300
+eta = 0.04
+epsilon = 0.01
 
 def tansig(x):
     output = (1-decimal.Decimal(math.exp(-2*x)))/(1+decimal.Decimal(math.exp(-2*x)))
@@ -119,8 +121,6 @@ for i in range(NUM_MIDDLE_LAYER1_NORONS):
 wb3[0,0] = random.random()
 
 ###############
-eta = 0.04
-epsilon = 0.01
 epoch = 0
 epoch_errors = np.zeros((NUMBER_EPOCHS , NUMBER_OF_X_LEARN))
 validation_errors = [] 
