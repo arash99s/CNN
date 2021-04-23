@@ -75,7 +75,6 @@ x_valid[:,1] = total_input[30:0:-1,0]
 ################# test input
 x_test[:,0] = total_input[0:10,0]
 x_test[:,1] = total_input[10:20,0]
-
 ############## calcute d_learn
 ## learn
 d_learn = np.ones((NUMBER_OF_X_LEARN,1))
